@@ -2,6 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="red_bottom_nav">#FD3A69</color>
+    <color name="red_app">#FD3A69</color>
     <color name="grey_bottom_nav">#7B7B7B</color>
+    <color name="text_black">#222831</color>
+    <color name="text_grey">#AAAAAD</color>
 </resources>
