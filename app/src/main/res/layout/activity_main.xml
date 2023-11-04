@@ -16,8 +16,18 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="Москва"
-        app:titleCentered="true" />
+        app:menu="@menu/app_bar_menu"
+        app:title="Москва">
+
+        <ImageButton
+            android:id="@+id/arrow_down"
+            android:layout_width="40dp"
+            android:layout_height="61dp"
+            android:layout_gravity="start|bottom"
+            android:background="@color/white"
+            android:src="@drawable/keyboard_arrow_down" />
+
+    </com.google.android.material.appbar.MaterialToolbar>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
