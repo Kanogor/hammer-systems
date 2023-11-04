@@ -1,7 +1,6 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("dagger.hilt.android.plugin")
     id("androidx.navigation.safeargs.kotlin")
     id("com.google.devtools.ksp")
 }
@@ -56,8 +55,8 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.1")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
 
     implementation("androidx.paging:paging-runtime-ktx:3.2.1")
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
@@ -65,14 +64,10 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.14.2")
     annotationProcessor("com.github.bumptech.glide:compiler:4.14.2")
     //Moshi
-    implementation("com.squareup.moshi:moshi:1.14.0")
-    ksp("com.squareup.moshi:moshi-kotlin-codegen:1.14.0")
+    implementation("com.squareup.moshi:moshi:1.15.0")
+    ksp("com.squareup.moshi:moshi-kotlin-codegen:1.15.0")
     //Gson
-    implementation("com.google.code.gson:gson:2.9.0")
-    //Hilt
-    implementation("com.google.dagger:hilt-android:2.43.2")
-    ksp("com.google.dagger:hilt-compiler:2.43.2")
-    implementation("androidx.fragment:fragment-ktx:1.6.1")
+    implementation("com.google.code.gson:gson:2.10.1")
     //recycler
     implementation("androidx.recyclerview:recyclerview:1.3.2")
     //retrofit
@@ -84,4 +79,7 @@ dependencies {
     implementation("androidx.room:room-runtime:2.6.0")
     implementation("androidx.room:room-ktx:2.6.0")
     ksp("androidx.room:room-compiler:2.6.0")
+    //Koin
+    implementation("io.insert-koin:koin-core:3.4.2")
+    implementation("io.insert-koin:koin-android:3.4.2")
 }

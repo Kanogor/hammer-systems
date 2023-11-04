@@ -5,17 +5,37 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import ru.kanogor.hammersystems.R
-
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.onEach
+import ru.kanogor.hammersystems.databinding.FragmentMenuBinding
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MenuFragment : Fragment() {
+
+    private var _binding: FragmentMenuBinding? = null
+    private val binding get() = _binding!!
+
+    private val viewModel: MenuViewModel by viewModel<MenuViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
+        _binding = FragmentMenuBinding.inflate(inflater, container, false)
+        return binding.root
+    }
 
-        return inflater.inflate(R.layout.fragment_menu, container, false)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        viewModel.getData()
+
+        viewModel.pizzas.onEach {
+            binding.text.text = it.toString()
+        }.launchIn(viewLifecycleOwner.lifecycleScope)
+
+
     }
 
 }
