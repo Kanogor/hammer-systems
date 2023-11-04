@@ -28,11 +28,13 @@ class MenuFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         viewModel.getData()
 
+        val pizzaAdapter = PizzaAdapter()
+        binding.recyclerView.adapter = pizzaAdapter
+
         viewModel.pizzas.onEach {
-            binding.text.text = it.toString()
+            pizzaAdapter.submitList(it)
         }.launchIn(viewLifecycleOwner.lifecycleScope)
 
 

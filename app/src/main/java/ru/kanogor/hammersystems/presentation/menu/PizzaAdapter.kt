@@ -21,7 +21,10 @@ class PizzaAdapter : ListAdapter<Pizza, PizzaViewHolder>(PizzaDiffUtilCallback()
         val nameText = item.name
         val descriptionText =
             if (item.descripcion == null) "Описание отсутствует" else item.descripcion
-        val costText = if (item.price == null) "Закончился" else "от ${item.price} руб."
+        val costText = if (item.price == null) "Закончился" else {
+            val price = item.price!!.replace(".00", "")
+            "от $price руб."
+        }
         with(holder.binding) {
             pizzaName.text = nameText
             pizzaDescription.text = descriptionText
