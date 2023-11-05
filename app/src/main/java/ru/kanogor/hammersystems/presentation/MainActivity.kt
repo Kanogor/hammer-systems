@@ -1,7 +1,6 @@
 package ru.kanogor.hammersystems.presentation
 
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
@@ -21,6 +20,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        setSupportActionBar(binding.toolbar)
+
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
 
@@ -39,7 +40,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.arrowDown.setOnClickListener {
-            Toast.makeText(this, " Clicked", Toast.LENGTH_SHORT).show()
+            navController.navController.popBackStack()
+            navController.navController.navigate(R.id.city_list)
         }
 
     }

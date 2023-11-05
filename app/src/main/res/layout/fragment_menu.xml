@@ -25,7 +25,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="16dp"
-                android:layout_marginBottom="24dp">
+                android:layout_marginBottom="24dp"
+                tools:ignore="SpeakableTextPresentCheck">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -59,6 +60,7 @@
         <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             app:layout_collapseMode="pin">
 
             <com.google.android.material.chip.ChipGroup
@@ -66,6 +68,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
                 app:singleLine="true"
                 app:singleSelection="true">
 
@@ -74,10 +77,11 @@
                     style="@style/ChipStyle"
                     android:layout_width="88dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
                     android:checked="true"
+                    android:text="@string/pizza_chip"
                     android:textAlignment="center"
-                    android:theme="@style/Theme.HammerSystems"
-                    android:text="@string/pizza_chip" />
+                    android:theme="@style/Theme.HammerSystems" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/combo_chip"
@@ -85,9 +89,9 @@
                     android:layout_width="88dp"
                     android:layout_height="wrap_content"
                     android:checked="false"
+                    android:text="@string/combo_chip"
                     android:textAlignment="center"
-                    android:theme="@style/Theme.HammerSystems"
-                    android:text="@string/combo_chip" />
+                    android:theme="@style/Theme.HammerSystems" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/deserts_chip"
@@ -95,9 +99,9 @@
                     android:layout_width="88dp"
                     android:layout_height="wrap_content"
                     android:checked="false"
+                    android:text="@string/deserts_chip"
                     android:textAlignment="center"
-                    android:theme="@style/Theme.HammerSystems"
-                    android:text="@string/deserts_chip" />
+                    android:theme="@style/Theme.HammerSystems" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/drink_chip"
@@ -105,19 +109,20 @@
                     android:layout_width="88dp"
                     android:layout_height="wrap_content"
                     android:checked="false"
+                    android:text="@string/drink_chip"
                     android:textAlignment="center"
-                    android:theme="@style/Theme.HammerSystems"
-                    android:text="@string/drink_chip" />
+                    android:theme="@style/Theme.HammerSystems" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/other_chip"
                     style="@style/ChipStyle"
                     android:layout_width="88dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
                     android:checked="false"
+                    android:text="@string/other_chip"
                     android:textAlignment="center"
-                    android:theme="@style/Theme.HammerSystems"
-                    android:text="@string/other_chip" />
+                    android:theme="@style/Theme.HammerSystems" />
 
             </com.google.android.material.chip.ChipGroup>
 
@@ -130,6 +135,7 @@
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"

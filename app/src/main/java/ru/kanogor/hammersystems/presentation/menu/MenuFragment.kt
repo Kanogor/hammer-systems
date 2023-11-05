@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.flow.launchIn
@@ -30,6 +31,8 @@ class MenuFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(false)
+
         viewModel.getData()
 
         val pizzaAdapter = PizzaAdapter()
@@ -47,6 +50,7 @@ class MenuFragment : Fragment() {
                         pizzaAdapter.submitList(it)
                     }.launchIn(viewLifecycleOwner.lifecycleScope)
                 }
+
                 else -> {
                     pizzaAdapter.submitList(emptyList())
                     Toast.makeText(requireContext(), "Товары отсутствуют", Toast.LENGTH_SHORT)
