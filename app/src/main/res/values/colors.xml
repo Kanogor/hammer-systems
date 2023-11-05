@@ -8,4 +8,5 @@
     <color name="text_grey">#AAAAAD</color>
     <color name="red_chip_back">#14FD3A69</color>
     <color name="grey_chip_text">#C3C4C9</color>
+    <color name="grey_line">#A1C3C4C9</color>
 </resources>
