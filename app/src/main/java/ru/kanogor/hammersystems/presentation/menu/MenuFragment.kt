@@ -10,16 +10,16 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
-import ru.kanogor.hammersystems.databinding.FragmentMenuBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import ru.kanogor.hammersystems.R
+import ru.kanogor.hammersystems.databinding.FragmentMenuBinding
 
 class MenuFragment : Fragment() {
 
     private var _binding: FragmentMenuBinding? = null
     private val binding get() = _binding!!
 
-    private val viewModel: MenuViewModel by viewModel<MenuViewModel>()
+    private val viewModel: MenuViewModel by viewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -43,23 +43,22 @@ class MenuFragment : Fragment() {
         }.launchIn(viewLifecycleOwner.lifecycleScope)
 
         binding.chipGroup.setOnCheckedStateChangeListener { group, _ ->
-
             when (group.checkedChipId) {
+                // Показывает позиции в категории "Пицца"
                 R.id.pizza_chip -> {
                     viewModel.pizzas.onEach {
                         pizzaAdapter.submitList(it)
                     }.launchIn(viewLifecycleOwner.lifecycleScope)
                 }
-
+                // Так как остальные позиции не представлены, выдает пустой список и всплывающее уведомление об этом
                 else -> {
                     pizzaAdapter.submitList(emptyList())
-                    Toast.makeText(requireContext(), "Товары отсутствуют", Toast.LENGTH_SHORT)
-                        .show()
+                    Toast.makeText(
+                        requireContext(),
+                        getString(R.string.no_items), Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
-
         }
-
     }
-
 }

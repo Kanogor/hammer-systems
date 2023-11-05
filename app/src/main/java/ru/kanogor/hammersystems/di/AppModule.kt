@@ -8,7 +8,8 @@ val appModule = module {
 
     viewModel {
         MenuViewModel(
-            repository = get()
+            repository = get(),
+            pref = get()
         )
     }
 }

@@ -14,5 +14,4 @@ class BasketFragment : Fragment() {
     ): View? {
         return inflater.inflate(R.layout.fragment_basket, container, false)
     }
-
 }

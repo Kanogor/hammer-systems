@@ -26,5 +26,6 @@
     <string name="deserts_chip">Десерты</string>
     <string name="other_chip">Другое</string>
     <string name="drink_chip">Напитки</string>
+    <string name="no_items">Товары отсутствуют</string>
 
 </resources>
