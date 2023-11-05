@@ -6,7 +6,7 @@
     <color name="grey_bottom_nav">#7B7B7B</color>
     <color name="text_black">#222831</color>
     <color name="text_grey">#AAAAAD</color>
-    <color name="red_chip_back">#14FD3A69</color>
+    <color name="red_chip_back">#FFB4C6</color>
     <color name="grey_chip_text">#C3C4C9</color>
-    <color name="grey_line">#A1C3C4C9</color>
+    <color name="grey_line">#F0F0F0</color>
 </resources>

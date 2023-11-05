@@ -17,8 +17,8 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:menu="@menu/app_bar_menu"
-        app:title="Москва">
+        app:title="Москва"
+        app:titleTextColor="@color/text_black">
 
         <ImageButton
             android:id="@+id/arrow_down"
@@ -29,6 +29,15 @@
             android:src="@drawable/keyboard_arrow_down"
             tools:ignore="ContentDescription" />
 
+        <ImageButton
+            android:id="@+id/qr_code"
+            android:layout_width="40dp"
+            android:layout_height="61dp"
+            android:layout_gravity="end|bottom"
+            android:background="@color/white"
+            android:src="@drawable/qr_code"
+            tools:ignore="ContentDescription" />
+
     </com.google.android.material.appbar.MaterialToolbar>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -37,8 +46,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="0dp"
         android:layout_marginEnd="0dp"
-        android:background="@color/white"
+        android:background="@color/grey_line"
         android:elevation="2dp"
+        app:itemActiveIndicatorStyle="@style/ShapeAppearance.Material3.Tooltip"
         app:itemIconTint="@color/bottom_nav_color"
         app:itemTextColor="@color/bottom_nav_color"
         app:layout_constraintBottom_toBottomOf="parent"
