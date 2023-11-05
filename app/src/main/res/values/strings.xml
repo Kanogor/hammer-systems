@@ -21,5 +21,10 @@
       and landed jobs at tech giants. Our vision is to build a gigantic network of
       geeks and we are only a fraction of it yet.
   </string>
+    <string name="pizza_chip">Пицца</string>
+    <string name="combo_chip">Комбо</string>
+    <string name="deserts_chip">Десерты</string>
+    <string name="other_chip">Другое</string>
+    <string name="drink_chip">Напитки</string>
 
 </resources>

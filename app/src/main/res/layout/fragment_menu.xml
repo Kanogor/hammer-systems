@@ -36,19 +36,21 @@
                     <ImageView
                         android:layout_width="300dp"
                         android:layout_height="112dp"
-                        android:src="@drawable/banner_first" />
+                        android:src="@drawable/banner_first"
+                        tools:ignore="ContentDescription" />
 
 
                     <ImageView
                         android:layout_width="300dp"
                         android:layout_height="112dp"
-                        android:src="@drawable/banner_second" />
+                        android:src="@drawable/banner_second"
+                        tools:ignore="ContentDescription" />
 
                     <ImageView
                         android:layout_width="300dp"
                         android:layout_height="112dp"
-                        android:src="@drawable/banner_third" />
-
+                        android:src="@drawable/banner_third"
+                        tools:ignore="ContentDescription" />
 
                 </LinearLayout>
             </HorizontalScrollView>
@@ -60,42 +62,62 @@
             app:layout_collapseMode="pin">
 
             <com.google.android.material.chip.ChipGroup
-                android:id="@+id/chip_group_gallery"
+                android:id="@+id/chip_group"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginStart="16dp"
                 app:singleLine="true"
                 app:singleSelection="true">
 
                 <com.google.android.material.chip.Chip
-                    android:id="@+id/still_chip"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/pizza_chip"
+                    style="@style/ChipStyle"
+                    android:layout_width="88dp"
                     android:layout_height="wrap_content"
-                    tools:text="some text" />
+                    android:checked="true"
+                    android:textAlignment="center"
+                    android:theme="@style/Theme.HammerSystems"
+                    android:text="@string/pizza_chip" />
 
                 <com.google.android.material.chip.Chip
-                    android:id="@+id/still"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/combo_chip"
+                    style="@style/ChipStyle"
+                    android:layout_width="88dp"
                     android:layout_height="wrap_content"
-                    tools:text="some text" />
+                    android:checked="false"
+                    android:textAlignment="center"
+                    android:theme="@style/Theme.HammerSystems"
+                    android:text="@string/combo_chip" />
 
                 <com.google.android.material.chip.Chip
-                    android:id="@+id/gallery"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/deserts_chip"
+                    style="@style/ChipStyle"
+                    android:layout_width="88dp"
                     android:layout_height="wrap_content"
-                    tools:text="some text" />
+                    android:checked="false"
+                    android:textAlignment="center"
+                    android:theme="@style/Theme.HammerSystems"
+                    android:text="@string/deserts_chip" />
 
                 <com.google.android.material.chip.Chip
-                    android:id="@+id/roy"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/drink_chip"
+                    style="@style/ChipStyle"
+                    android:layout_width="88dp"
                     android:layout_height="wrap_content"
-                    tools:text="some text" />
+                    android:checked="false"
+                    android:textAlignment="center"
+                    android:theme="@style/Theme.HammerSystems"
+                    android:text="@string/drink_chip" />
 
                 <com.google.android.material.chip.Chip
-                    android:id="@+id/still_chip_gallery"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/other_chip"
+                    style="@style/ChipStyle"
+                    android:layout_width="88dp"
                     android:layout_height="wrap_content"
-                    tools:text="some text" />
+                    android:checked="false"
+                    android:textAlignment="center"
+                    android:theme="@style/Theme.HammerSystems"
+                    android:text="@string/other_chip" />
 
             </com.google.android.material.chip.ChipGroup>
 

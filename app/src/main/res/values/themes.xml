@@ -1,7 +1,8 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
 
     <style name="Base.Theme.HammerSystems" parent="Theme.Material3.DayNight.NoActionBar">
-
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="Theme.HammerSystems" parent="Base.Theme.HammerSystems" />
@@ -17,4 +18,13 @@
         <item name="cornerFamily">rounded</item>
         <item name="minHeight">48dp</item>
     </style>
+
+    <style name="ChipStyle" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@color/chip_color</item>
+        <item name="android:textColor">@color/chip_text_color</item>
+        <item name="android:textAppearance">@style/PizzaText.Chip</item>
+        <item name="android:elevation">10dp</item>
+        <item name="chipCornerRadius">6dp</item>
+    </style>
+
 </resources>

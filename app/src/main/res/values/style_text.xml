@@ -22,4 +22,9 @@
         <item name="android:textColor">@color/red_app</item>
     </style>
 
+    <style name="PizzaText.Chip">
+        <item name="android:textSize">13sp</item>
+        <item name="fontFamily">@font/sf_ui_400</item>
+    </style>
+
 </resources>
